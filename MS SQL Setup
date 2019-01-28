@@ -1,0 +1,15 @@
+-- This will create a simple Products table, in which we can add records to perform basic/intermediate queries from.
+CREATE TABLE dbo.Products  
+   (ProductID int PRIMARY KEY NOT NULL,  
+   ProductName varchar(25) NOT NULL,  
+   Price money NULL,  
+   ProductDescription text NULL)  
+GO
+
+-- This will insert records into the Products table, created above.
+INSERT dbo.Products (ProductID, ProductName, Price, ProductDescription)  
+    VALUES (2, 'Wrench', 16.99, 'Adjustable Wrench')  
+GO
+
+-- This pulls all records from the Products table we've created.
+SELECT * FROM master.dbo.Products;
